@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Ggiannis</title><description>A description of Ggiannis</description><link>https://your-website-url.com</link><language>en</language><lastBuildDate>Sun, 3 Apr 2022 08:48:36 +0000</lastBuildDate><pubDate>Sun, 3 Apr 2022 08:48:36 +0000</pubDate><ttl>250</ttl><atom:link href="https://your-website-url.com/feed.rss" rel="self" type="application/rss+xml"/><item><guid isPermaLink="true">https://your-website-url.com/posts/testPost</guid><title>Test</title><description>A description of my first post.</description><link>https://your-website-url.com/posts/testPost</link><pubDate>Sat, 2 Apr 2022 21:03:00 +0000</pubDate><content:encoded><![CDATA[<h1>Test</h1><p>How to create one result builder.</p><pre><code><span class="keyword">@resultBuilder
+struct</span> StackBuilder {
+    <span class="keyword">static func</span> buildBlock() -&gt; [<span class="type">UIView</span>] { [] }
+}
+
+<span class="keyword">extension</span> <span class="type">StackBuilder</span> {
+    <span class="keyword">static func</span> buildBlock(<span class="keyword">_</span> views: <span class="type">UIView</span>...) -&gt; [<span class="type">UIView</span>] {
+        views
+    }
+}
+</code></pre>]]></content:encoded></item></channel></rss>
