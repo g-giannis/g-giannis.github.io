@@ -7,7 +7,7 @@ tags: first, article
 # Test
 
 
-How to create one result builder.
+How to create one result builder
 
 ```swift
 @resultBuilder
