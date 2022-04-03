@@ -13,7 +13,7 @@
 body {
     background: #fff;
     color: #000;
-    font-family: Helvetica, Arial;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-align: center;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 header {
-    background-color: #eee;
+    background-color: #e3f1e8ff;
 }
 
 header .wrapper {
@@ -43,6 +43,15 @@ header .site-name {
     font-size: 1.5em;
     color: #000;
     font-weight: bold;
+}
+
+/* Custom */
+hr {
+    height: 1px;
+    background-color: #ededed;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 nav {
