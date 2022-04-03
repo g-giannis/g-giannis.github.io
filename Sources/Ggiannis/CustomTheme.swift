@@ -175,7 +175,7 @@ private struct SiteHeader<Site: Website>: Component {
                 // How to add image.
 //                Image(url: "https://dl.dropboxusercontent.com/s/d1uz3wfqxvukopv/Logo.png", description: "Logo Giannis Giannopoulos")
 //                    .style("height: 100px; border-radius: 25px;")
-                Link("GGiannis", url: "/")
+                Link(context.site.name, url: "/")
                     .class("site-name")
 
                 if Site.SectionID.allCases.count > 1 {
