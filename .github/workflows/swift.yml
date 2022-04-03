@@ -1,5 +1,5 @@
 # Name of the Workflow
-name: DeployPublish
+name: swift
 
 # Run this workflow only on push on main branch.
 on:
