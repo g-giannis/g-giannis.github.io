@@ -17,8 +17,8 @@ extension Page {
             return T(rawValue: Ggiannis.SectionID.photos.rawValue)
         case Ggiannis.SectionID.about.rawValue:
             return T(rawValue: Ggiannis.SectionID.about.rawValue)
-        case Ggiannis.SectionID.résumé.rawValue:
-            return T(rawValue: Ggiannis.SectionID.résumé.rawValue)
+        case Ggiannis.SectionID.resume.rawValue:
+            return T(rawValue: Ggiannis.SectionID.resume.rawValue)
         default:
             return nil
         }

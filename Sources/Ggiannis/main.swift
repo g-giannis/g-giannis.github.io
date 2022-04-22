@@ -10,7 +10,7 @@ struct Ggiannis: Website {
         case photos
         case posts
         case about
-        case résumé
+        case resume
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
