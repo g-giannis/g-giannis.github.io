@@ -7,8 +7,10 @@ import SplashPublishPlugin
 struct Ggiannis: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
+        case photos
         case posts
         case about
+        case résumé
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
@@ -17,8 +19,8 @@ struct Ggiannis: Website {
 
     // Update these properties to configure your website:
     var url = URL(string: "https://your-website-url.com")!
-    var name = "Ggiannis"
-    var description = "A description of Ggiannis"
+    var name = "GGiannis"
+    var description = ""
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
@@ -27,6 +29,7 @@ try Ggiannis().publish(using: [
     .installPlugin(.splash(withClassPrefix: "")),
     .addMarkdownFiles(),
     .copyResources(),
+    .copyResources(at: Path("Content/photos/"), to: Path("Images/photos"), includingFolder: false),
     .generateHTML(withTheme: .custom),
     .generateRSSFeed(including: [.posts]),
     .generateSiteMap(),

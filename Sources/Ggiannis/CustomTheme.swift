@@ -15,6 +15,7 @@ extension Theme {
             resourcePaths: [
                 "Resources/Default/styles.css",
                 "Resources/SplashPublishPlugin/xcodeColors.css",
+                "Resources/Default/images.css"
             ]
         )
     }
@@ -25,7 +26,7 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                        context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: index, on: context.site),
+            .customHead(for: index, on: context.site),
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper {
@@ -50,11 +51,10 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                          context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: section, on: context.site),
+            .customHead(for: section, on: context.site),
             .body {
                 SiteHeader(context: context, selectedSelectionID: section.id)
                 Wrapper {
-                    H1(section.title)
                     ItemList(items: section.items, site: context.site)
                 }
                 SiteFooter()
@@ -66,7 +66,7 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: item, on: context.site, stylesheetPaths: [
+            .customHead(for: item, on: context.site, stylesheetPaths: [
                 "/styles.css",
                 "/xcodeColors.css",
             ]),
@@ -91,10 +91,14 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .customHead(for: page, on: context.site, stylesheetPaths: [
+                "/styles.css",
+                "/xcodeColors.css",
+                "/images.css"]),
             .body {
-                SiteHeader(context: context, selectedSelectionID: nil)
-                Wrapper(page.body)
+                SiteHeader(context: context,
+                           selectedSelectionID: page.selectedSectionID())
+                Node.customPage(for: page, context: context)
                 SiteFooter()
             }
         )
@@ -104,7 +108,7 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                          context: PublishingContext<Site>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .customHead(for: page, on: context.site),
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper {
@@ -128,7 +132,7 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                             context: PublishingContext<Site>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .customHead(for: page, on: context.site),
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper {
@@ -154,88 +158,5 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                 SiteFooter()
             }
         )
-    }
-}
-
-private struct Wrapper: ComponentContainer {
-    @ComponentBuilder var content: ContentProvider
-
-    var body: Component {
-        Div(content: content).class("wrapper")
-    }
-}
-
-private struct SiteHeader<Site: Website>: Component {
-    var context: PublishingContext<Site>
-    var selectedSelectionID: Site.SectionID?
-
-    var body: Component {
-        Header {
-            Wrapper {
-                // How to add image.
-//                Image(url: "https://dl.dropboxusercontent.com/s/d1uz3wfqxvukopv/Logo.png", description: "Logo Giannis Giannopoulos")
-//                    .style("height: 100px; border-radius: 25px;")
-                Link(context.site.name, url: "/")
-                    .class("site-name")
-
-                if Site.SectionID.allCases.count > 1 {
-                    navigation
-                }
-            }
-        }
-    }
-
-    private var navigation: Component {
-        Navigation {
-            List(Site.SectionID.allCases) { sectionID in
-                let section = context.sections[sectionID]
-
-                return Link(section.title,
-                            url: section.path.absoluteString
-                )
-                .class(sectionID == selectedSelectionID ? "selected" : "")
-            }
-        }
-    }
-}
-
-private struct ItemList<Site: Website>: Component {
-    var items: [Item<Site>]
-    var site: Site
-
-    var body: Component {
-        List(items) { item in
-            Article {
-                H1(Link(item.title, url: item.path.absoluteString))
-                Paragraph(item.description)
-                Text("").addLineBreak()
-                ItemTagList(item: item, site: site)
-            }
-        }
-        .class("item-list")
-    }
-}
-
-private struct ItemTagList<Site: Website>: Component {
-    var item: Item<Site>
-    var site: Site
-
-    var body: Component {
-        List(item.tags) { tag in
-            Link(tag.string, url: site.path(for: tag).absoluteString)
-        }
-        .class("tag-list")
-    }
-}
-
-private struct SiteFooter: Component {
-    var body: Component {
-        Footer {
-//            Paragraph {
-//                Link("RSS feed", url: "/feed.rss")
-//            }
-            Text("© 2022 Giannis Giannopoulos, All rights reserved. Made with ❤️ in Berlin.")
-            Paragraph("")
-        }
     }
 }

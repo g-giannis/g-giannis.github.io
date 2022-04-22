@@ -1,76 +1,27 @@
-<img src="https://www.dropbox.com/s/o3wjmn1d0v7gr7w/Profilfoto.jpeg?raw=1" alt="Giannis Giannopoulos" title="Giannis Giannopoulos" class="profileImage" /> 
-<br/><br/>
-
-# About me
-
 <style>
 .profileImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
+  min-width: 200px;
   border-radius: 50%;
 }
 </style>
 
-## Skills 
-<br/>
+<p style="padding-bottom: 40px;"><img src="https://www.dropbox.com/s/o3wjmn1d0v7gr7w/Profilfoto.jpeg?raw=1" alt="Giannis Giannopoulos" title="Giannis Giannopoulos" class="profileImage" /></p>
 
-<style>
-table th:first-of-type {
-    width: 50%;
-}
-table th:nth-of-type(2) {
-    width: 50%;
-}
-</style>
 
-| **Personal** |  **Programming** |
-| ----------- | ----------- |
-| Team spirit, work commitment | iOS / macOS (Obj-C, Swift, SwiftUI, Combine), Xamarin  |
-| willing to learn, organisational skills, | Git, Unit Tests, TDD, Automated UI Tests |
-| attention to detail, time management | RESTful Web, Services (JSON), SOAP, NoSQL, MySQL |
-<br/>
+<p style="padding-bottom: 40px;">Hi! 👋🏻 I am Giannis a passionate iOS Developer from Greece living in the beautiful Berlin! 
+I created this website to share any knowledge with others and solutions to problems, which I solve in my daily work. Who knows, perhaps this can save someone from lots of headaches. 😅</p>
 
-## Work Experience
-<br/>
 
-### Check24 Mobilfunk GmbH 👨🏻‍💻
-01/12/2018 - 31.12.2021
-<br/>
+In my spare time I like:
 
-Senior Software Developer 
-<br/>
+📷 taking photographs
 
-- Maintaining the Check24 iOS App with **over than 1 Million customers** and leading the iOS Team. 
+👨🏻‍💻 coding iOS / macOS Applications
 
----
-### EBF GmbH 👨🏻‍💻
-01/10/2015 - 31/11/2018 
-<br/>
+📈 investing
 
-Senior Software Developer 
-<br/>
-
-- Enterprise iOS and Xamarin applications
-
----
-### SolidApps GmbH 👨🏻‍💻
-01/11/2012 – 31/09/2015
-<br/>
-
-iOS Developer
-<br/>
-
-- Mainly develop and maintain iOS applications 
-- Occasionally developing also for Windows Phone
-
----
-<div style="height:5px;"><br></div>
-
-## Languages
-<br/>
-
-🇺🇸 English: B2
-🇩🇪 German: B1
-🇬🇷 Greek: Mother Language
+👨🏻‍🍳 cooking delicious recipes
