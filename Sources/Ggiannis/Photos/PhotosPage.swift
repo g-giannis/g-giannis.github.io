@@ -11,14 +11,28 @@ import Publish
 import struct Files.File
 
 struct PhotosPage<Site: Website>: Component {
+
     init(context: PublishingContext<Site>) {
         self.context = context
 
-        let files = try! context.folder(at: "/Content/photos").files
-        let itemsPerColumn = files.count() / 3
-        self.filesToDisplay = Array(files).chunked(into: itemsPerColumn)
+        let numberOfColumns: Int = 4
 
-        self.columns = filesToDisplay.enumerated().map { $0.offset }
+        let files = try! context.folder(at: "/Content/photos").files.filter({ !$0.name.hasSuffix(".json") })
+        columns = (0...numberOfColumns).map { $0 }
+        var filesToDisplay = columns.map { _ in [File]() }
+        var sectionIndex = 0
+
+        files.forEach { file in
+            filesToDisplay[sectionIndex].append(file)
+
+            sectionIndex += 1
+
+            if sectionIndex == numberOfColumns {
+                sectionIndex = 0
+            }
+        }
+
+        self.filesToDisplay = filesToDisplay
     }
 
     let columns: [Int]
