@@ -20,11 +20,22 @@ table th:nth-of-type(2) {
 ## Work Experience
 <br/>
 
+### AppDev GmbH 👨🏻‍💻
+01/02/2022 - Present
+<br/>
+
+Senior iOS Software Developer 
+<br/>
+
+- Developing iOS Applications in SwiftUI leveraging the new Swift Concurrency API
+- Sharing knowledge through small tech talks
+
+---
 ### Check24 Mobilfunk GmbH 👨🏻‍💻
 01/12/2018 - 31.12.2021
 <br/>
 
-Senior Software Developer 
+Senior iOS Software Developer 
 <br/>
 
 - Maintaining the Check24 iOS App with **over than 1 Million customers** and leading the iOS Team. 
