@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>GGiannis</title><description></description><link>https://ggiannis.com</link><language>en</language><lastBuildDate>Sun, 26 Mar 2023 15:55:06 +0000</lastBuildDate><pubDate>Sun, 26 Mar 2023 15:55:06 +0000</pubDate><ttl>250</ttl><atom:link href="https://ggiannis.com/feed.rss" rel="self" type="application/rss+xml"/><item><guid isPermaLink="true">https://ggiannis.com/posts/testPost</guid><title>Stackbuilder</title><description>Stackbuilder tutorial.</description><link>https://ggiannis.com/posts/testPost</link><pubDate>Sat, 2 Apr 2022 21:03:00 +0000</pubDate><content:encoded><![CDATA[<h1>Stackbuilder</h1><p>How to create one result builder.</p><pre><code><span class="keyword">@resultBuilder
-struct</span> StackBuilder {
-    <span class="keyword">static func</span> buildBlock() -&gt; [<span class="type">UIView</span>] { [] }
-}
-
-<span class="keyword">extension</span> <span class="type">StackBuilder</span> {
-    <span class="keyword">static func</span> buildBlock(<span class="keyword">_</span> views: <span class="type">UIView</span>...) -&gt; [<span class="type">UIView</span>] {
-        views
-    }
-}
-</code></pre>]]></content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>GGiannis</title><description></description><link>https://ggiannis.com</link><language>en</language><lastBuildDate>Sun, 26 Mar 2023 22:38:17 +0000</lastBuildDate><pubDate>Sun, 26 Mar 2023 22:38:17 +0000</pubDate><ttl>250</ttl><atom:link href="https://ggiannis.com/feed.rss" rel="self" type="application/rss+xml"/></channel></rss>
