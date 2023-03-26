@@ -16,12 +16,28 @@ private extension Node where Context == HTML.DocumentContext {
     }
 }
 
+private extension Node where Context == HTML.DocumentContext {
+    static func googleAnalytics() -> Node<HTML.HeadContext> {
+        return .raw("""
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9VMERTEDS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D9VMERTEDS');
+</script>
+""")
+    }
+}
+
 extension Node where Context == HTML.DocumentContext {
     static func customHead<T: Website>(for index: Publish.Location, on site: T,
                                        stylesheetPaths: [Path] = ["/styles.css"]) -> Node {
         .group(
             .head(for: index, on: site, stylesheetPaths: stylesheetPaths),
-            .metaTheme().convertToNode()
+            .metaTheme().convertToNode(),
+            .googleAnalytics().convertToNode()
         )
     }
 }
