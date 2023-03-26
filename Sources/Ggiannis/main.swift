@@ -8,7 +8,7 @@ struct Ggiannis: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case photos
-        case posts
+        case blog
         case about
         case resume
     }
@@ -31,7 +31,7 @@ try Ggiannis().publish(using: [
     .copyResources(),
     .copyResources(at: Path("Content/photos/"), to: Path("Images/photos"), includingFolder: false),
     .generateHTML(withTheme: .custom),
-    .generateRSSFeed(including: [.posts]),
+    .generateRSSFeed(including: [.blog]),
     .generateSiteMap(),
 ])
 
