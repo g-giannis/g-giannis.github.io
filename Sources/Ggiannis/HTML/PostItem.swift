@@ -28,8 +28,8 @@ struct PostItem: Component {
             Div {
                 Paragraph(item.description)
                 Text("").addLineBreak()
-                ItemTagList(item: item, site: site)
+                ItemTagList(tags: item.tags, site: site)
             }.class("item-content")
-        }
+        }.class("item-container")
     }
 }

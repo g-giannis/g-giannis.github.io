@@ -15,7 +15,7 @@ struct SiteFooter: Component {
 //                Link("RSS feed", url: "/feed.rss")
 //            }
             Paragraph {
-                Text("© 2022 Giannis Giannopoulos, All rights reserved. Made with lots of ☕️ and ❤️ in Berlin.")
+                Text("© \(Calendar.current.component(.year, from: Date())) Giannis Giannopoulos, All rights reserved. Made with lots of ☕️ and ❤️ in Berlin.")
                     .addLineBreak()
                     .addLineBreak()
             }

@@ -38,47 +38,44 @@ private struct CustomThemeFactory: HTMLFactory {
 //                    H1(index.title)
 //                    Paragraph(context.site.description)
 //                        .class("description")
-                    
-                    Div {
-//                        Node.a(
-//                            Image(url: "/Images/About/Profilfoto.jpeg", description: "Giannis Giannopoulos")
-//                                .class("profile-image")
-//                                .convertToNode(),
-//                            .href(.init("/"))
-//                        )
-                        H2("Hi, I'm Giannis.")
-                        Paragraph {
-                            Text("""
+
+                    H2("Hi, I'm Giannis.")
+                    Paragraph {
+                        Text("""
                                 Welcome to my blog!
                                 Here, I share updates on both my professional work and personal hobbies, so you can expect to find a mix of content that reflects my diverse interests.
                                 """)
-                        }
                     }
 
-                    Text("").addLineBreak()
+                    LineBreak()
 
-                    ItemList(
-                        items: context.allItems(
-                            sortedBy: \.date,
-                            order: .descending
-                        ),
-                        site: context.site
-                    )
+                    Div {
+                        Div {
+                            H2("Latest from Blog")
+//                            Divider()
 
-                    
-                    Link("Browse all tags",
-                         url: context.site.tagListPath.absoluteString
-                    )
-                    .class("browse-all")
+                            ItemList(
+                                items: context.allItems(
+                                    sortedBy: \.date,
+                                    order: .descending
+                                ),
+                                site: context.site
+                            )
+                        }.class("column-content-left")//.style("flex-basis: 60%;")
 
-//                    ItemList(
-//                        items: context.items(
-//                            taggedWith: page.tag,
-//                            sortedBy: \.date,
-//                            order: .descending
-//                        ),
-//                        site: context.site
-//                    )
+                        Div {
+                            Div {
+                                H2("Explore Categories")
+    //                            Divider()
+
+                                ItemTagList(tags: context.allTags.sorted(), site: context.site)
+
+                                LineBreak()
+                            }.class("sticky-container")
+                        }.class("column-content-right")//.style("flex-basis: 35%;")
+                    }.class("column-content")
+
+                    LineBreak()
                 }
                 SiteFooter()
             }
@@ -116,7 +113,7 @@ private struct CustomThemeFactory: HTMLFactory {
                         Article {
                             Div(item.content.body).class("content")
                             Span("Tagged with: ")
-                            ItemTagList(item: item, site: context.site)
+                            ItemTagList(tags: item.tags, site: context.site).style("margin-top: 10px;")
                         }
                     }
                     SiteFooter()
@@ -151,15 +148,16 @@ private struct CustomThemeFactory: HTMLFactory {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper {
                     H1("Browse all tags")
-                    List(page.tags.sorted()) { tag in
-                        ListItem {
-                            Link(tag.string,
-                                 url: context.site.path(for: tag).absoluteString
-                            )
-                        }
-                        .class("tag")
-                    }
-                    .class("all-tags")
+                    ItemTagList(tags: page.tags.sorted(), site: context.site)
+//                    List(page.tags.sorted()) { tag in
+//                        ListItem {
+//                            Link(tag.string,
+//                                 url: context.site.path(for: tag).absoluteString
+//                            )
+//                        }
+//                        .class("tag")
+//                    }
+//                    .class("all-tags")
                 }
                 SiteFooter()
             }
@@ -196,5 +194,17 @@ private struct CustomThemeFactory: HTMLFactory {
                 SiteFooter()
             }
         )
+    }
+}
+
+struct LineBreak: Component {
+    var body: Component {
+        Text("").addLineBreak()
+    }
+}
+
+struct Divider: Component {
+    var body: Component {
+        Node.hr(.empty)
     }
 }

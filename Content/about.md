@@ -10,7 +10,7 @@ As an avid photographer, I enjoy capturing the beauty of the world around me thr
 
 In addition to my passion for technology, I also have a keen interest in investing, always seeking new opportunities to grow my wealth and knowledge. 
 
-When I'm not busy managing my investments, I enjoy exploring my culinary skills by cooking up delicious recipes in the kitchen, experimenting with flavors and ingredients to create mouthwatering dishes. 🤤👨🏻‍🍳 
+When I'm not busy managing my investments, I enjoy exploring my culinary skills by cooking up delicious recipes in the kitchen, experimenting with flavors and ingredients to create tasty dishes. 🤤👨🏻‍🍳 
 
 Last but not least, I also love DJing and creating music that keeps people dancing and energized. 🕺🏻🎉
 

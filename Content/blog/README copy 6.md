@@ -1,7 +1,7 @@
 ---
 title: Test Post 2
 description: Here is some description about the post Test Post 2
-tags: ios, test, xcode, swiftui, productivity
+tags: ios, test, xcode, swiftui
 type: quickTip
 ---
 #  Test Post 2
