@@ -4,6 +4,8 @@
 *  MIT license, see LICENSE file for details
 */
 
+/* MARK: - General */
+
 * {
     margin: 0;
     padding: 0;
@@ -90,7 +92,27 @@ a {
     margin-bottom: 40px;
 }
 
+.profile-image {
+    display: block;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+}
+
+/*.site-header-content > div {*/
+/*    float: left;*/
+/*}*/
+
+/* MARK: - Item List */
+
 .item-list > li {
+    list-style-type: none;
+    padding-inline-start: 0;
     display: block;
     padding: 20px;
     border-radius: 20px;
@@ -98,8 +120,15 @@ a {
     margin-bottom: 20px;
 }
 
-.item-list > li:last-child {
-    margin-bottom: 0;
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+    grid-gap: 1rem;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .item-list h1 {
@@ -107,21 +136,27 @@ a {
     font-size: 1.3em;
 }
 
+.item-list a {
+    text-decoration: none;
+}
+
 .item-list p {
     margin-bottom: 0;
 }
 
+/* MARK: - Tag List */
+
 .tag-list {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .tag-list li,
 .tag {
     display: inline-block;
     background-color: #000;
-    color: #ddd;
-    padding: 4px 6px;
-    border-radius: 5px;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 8px;
     margin-right: 5px;
 }
 
@@ -129,6 +164,8 @@ a {
 .tag a {
     text-decoration: none;
 }
+
+/* MARK: - */
 
 .item-page .tag-list {
     display: inline-block;
@@ -152,6 +189,8 @@ a {
 footer {
     color: #8a8a8a;
 }
+
+/* MARK: - Dark Mode */
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -180,8 +219,9 @@ footer {
     }
 }
 
-@media(max-width: 600px) {
-    .wrapper {
-        padding: 40px 20px;
-    }
-}
+/* ❗️ This was causing the issue for cards */
+/*@media(max-width: 600px) {*/
+/*    .wrapper {*/
+/*        padding: 40px 20px;*/
+/*    }*/
+/*}*/

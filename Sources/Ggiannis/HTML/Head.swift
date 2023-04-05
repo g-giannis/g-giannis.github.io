@@ -36,6 +36,7 @@ extension Node where Context == HTML.DocumentContext {
                                        stylesheetPaths: [Path] = ["/styles.css"]) -> Node {
         .group(
             .head(for: index, on: site, stylesheetPaths: stylesheetPaths),
+//            .raw("<meta http-equiv=\"refresh\" content=\"3\" >"),
             .metaTheme().convertToNode(),
             .googleAnalytics().convertToNode()
         )

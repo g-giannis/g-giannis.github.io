@@ -8,7 +8,7 @@
 import Publish
 import Plot
 
-extension Theme {
+extension Theme<Ggiannis> {
     static var custom: Self {
         Theme(
             htmlFactory: CustomThemeFactory(),
@@ -21,19 +21,42 @@ extension Theme {
     }
 }
 
-private struct CustomThemeFactory<Site: Website>: HTMLFactory {
+#warning("Here adjust this page for the landing page")
+private struct CustomThemeFactory: HTMLFactory {
     func makeIndexHTML(for index: Index,
-                       context: PublishingContext<Site>) throws -> HTML {
+                       context: PublishingContext<Ggiannis>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .customHead(for: index, on: context.site),
+            .customHead(for: index, on: context.site, stylesheetPaths: [
+                "/styles.css",
+                "/xcodeColors.css",
+            ]),
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper {
-                    H1(index.title)
-                    Paragraph(context.site.description)
-                        .class("description")
-                    H2("Latest content")
+                    #warning("do i need these???")
+//                    H1(index.title)
+//                    Paragraph(context.site.description)
+//                        .class("description")
+                    
+                    Div {
+//                        Node.a(
+//                            Image(url: "/Images/About/Profilfoto.jpeg", description: "Giannis Giannopoulos")
+//                                .class("profile-image")
+//                                .convertToNode(),
+//                            .href(.init("/"))
+//                        )
+                        H2("Hi, I'm Giannis.")
+                        Paragraph {
+                            Text("""
+                                Welcome to my blog!
+                                Here, I share updates on both my professional work and personal hobbies, so you can expect to find a mix of content that reflects my diverse interests.
+                                """)
+                        }
+                    }
+
+                    Text("").addLineBreak()
+
                     ItemList(
                         items: context.allItems(
                             sortedBy: \.date,
@@ -41,14 +64,29 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
                         ),
                         site: context.site
                     )
+
+                    
+                    Link("Browse all tags",
+                         url: context.site.tagListPath.absoluteString
+                    )
+                    .class("browse-all")
+
+//                    ItemList(
+//                        items: context.items(
+//                            taggedWith: page.tag,
+//                            sortedBy: \.date,
+//                            order: .descending
+//                        ),
+//                        site: context.site
+//                    )
                 }
                 SiteFooter()
             }
         )
     }
 
-    func makeSectionHTML(for section: Section<Site>,
-                         context: PublishingContext<Site>) throws -> HTML {
+    func makeSectionHTML(for section: Section<Ggiannis>,
+                         context: PublishingContext<Ggiannis>) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .customHead(for: section, on: context.site),
@@ -88,7 +126,7 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
     }
 
     func makePageHTML(for page: Page,
-                      context: PublishingContext<Site>) throws -> HTML {
+                      context: PublishingContext<Ggiannis>) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .customHead(for: page, on: context.site, stylesheetPaths: [
@@ -105,7 +143,7 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
     }
 
     func makeTagListHTML(for page: TagListPage,
-                         context: PublishingContext<Site>) throws -> HTML? {
+                         context: PublishingContext<Ggiannis>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
             .customHead(for: page, on: context.site),
@@ -129,7 +167,7 @@ private struct CustomThemeFactory<Site: Website>: HTMLFactory {
     }
 
     func makeTagDetailsHTML(for page: TagDetailsPage,
-                            context: PublishingContext<Site>) throws -> HTML? {
+                            context: PublishingContext<Ggiannis>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
             .customHead(for: page, on: context.site),
