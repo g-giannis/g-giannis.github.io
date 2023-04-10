@@ -29,7 +29,7 @@ body {
 }
 
 header {
-    background-color: #e3f1e8;
+    background-color: #c9e4d2;
 }
 
 header .wrapper {
@@ -115,7 +115,7 @@ ul {
     display: block;
     padding: 20px;
     border-radius: 10px;
-    background-color: #eee;
+    background-color: #ededed;
 }
 
 .item-list > li {
@@ -191,7 +191,7 @@ ul {
 
 .tag:hover {
     text-decoration: none;
-    background-color: #e3f1e8;
+    background-color: #c9e4d2;
     color: #000;
 }
 
@@ -241,7 +241,7 @@ footer {
     }
 
     header {
-        background-color: #e3f1e8;
+        background-color: #c9e4d2;
     }
 
     nav {

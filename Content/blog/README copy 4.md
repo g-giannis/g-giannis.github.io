@@ -1,10 +1,11 @@
 ---
-title: Test Post 2
+title: 10 April Post
 description: Here is some description about the post Test Post 2
 tags: ios, test, xcode, swiftui
 type: quickTip
+date: 2023-04-10 00:00
 ---
-#  Test Post 2
+# 10 April Post
 
 ```
 let test = Struct()

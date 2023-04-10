@@ -21,7 +21,6 @@ extension Theme<Ggiannis> {
     }
 }
 
-#warning("Here adjust this page for the landing page")
 private struct CustomThemeFactory: HTMLFactory {
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<Ggiannis>) throws -> HTML {
@@ -55,13 +54,10 @@ private struct CustomThemeFactory: HTMLFactory {
 //                            Divider()
 
                             ItemList(
-                                items: context.allItems(
-                                    sortedBy: \.date,
-                                    order: .descending
-                                ),
+                                items: context.mostRecentFiveItems,
                                 site: context.site
                             )
-                        }.class("column-content-left")//.style("flex-basis: 60%;")
+                        }.class("column-content-left")
 
                         Div {
                             Div {
@@ -72,7 +68,7 @@ private struct CustomThemeFactory: HTMLFactory {
 
                                 LineBreak()
                             }.class("sticky-container")
-                        }.class("column-content-right")//.style("flex-basis: 35%;")
+                        }.class("column-content-right")
                     }.class("column-content")
 
                     LineBreak()
@@ -90,7 +86,7 @@ private struct CustomThemeFactory: HTMLFactory {
             .body {
                 SiteHeader(context: context, selectedSelectionID: section.id)
                 Wrapper {
-                    ItemList(items: section.items, site: context.site)
+                    ItemList(items:context.sort(section.items, sortedBy: \.date, order: .descending), site: context.site)
                 }
                 SiteFooter()
             }
