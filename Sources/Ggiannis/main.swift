@@ -8,6 +8,7 @@ struct Ggiannis: Website {
     enum MarkdownDocumentType: String, Decodable {
         case quickTip
         case article
+        case app
     }
 
     enum SectionID: String, WebsiteSectionID {
@@ -15,6 +16,7 @@ struct Ggiannis: Website {
         case photos
         case blog
         case about
+        case apps
         case resume
     }
 

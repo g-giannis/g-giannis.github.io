@@ -108,6 +108,13 @@ ul {
     border-radius: 50%;
 }
 
+.content-image {
+    text-align: center;
+    max-width:100%;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
 /* MARK: - Item List */
 
 .item-container {
@@ -223,6 +230,11 @@ ul {
 
 footer {
     color: #8a8a8a;
+}
+
+.copyright {
+    font-size: 12px;
+    font-style: italic;
 }
 
 /* MARK: - Dark Mode */

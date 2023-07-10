@@ -19,6 +19,8 @@ extension Page {
             return T(rawValue: Ggiannis.SectionID.about.rawValue)
         case Ggiannis.SectionID.resume.rawValue:
             return T(rawValue: Ggiannis.SectionID.resume.rawValue)
+        case Ggiannis.SectionID.apps.rawValue:
+            return T(rawValue: Ggiannis.SectionID.apps.rawValue)
         default:
             return nil
         }

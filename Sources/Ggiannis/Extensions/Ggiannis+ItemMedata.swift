@@ -14,24 +14,30 @@ extension Ggiannis.ItemMetadata {
             return "Quick Tip"
         case .article:
             return "Article"
+        case .app:
+            return "Download App"
         }
     }
 
     var darkIcon: String {
         switch type {
         case .quickTip:
-            return "/Images/idea-dark.svg"
+            return "/Images/DocumentTypes/idea-dark.svg"
         case .article:
-            return "/Images/document-dark.svg"
+            return "/Images/DocumentTypes/document-dark.svg"
+        case .app:
+            return "/Images/DocumentTypes/download-dark.svg"
         }
     }
 
     var lightIcon: String {
         switch type {
         case .quickTip:
-            return "/Images/idea-light.svg"
+            return "/Images/DocumentTypes/idea-light.svg"
         case .article:
-            return "/Images/document-light.svg"
+            return "/Images/DocumentTypes/document-light.svg"
+        case .app:
+            return "/Images/DocumentTypes/download-light.svg"
         }
     }
 }

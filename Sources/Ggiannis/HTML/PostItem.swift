@@ -15,6 +15,15 @@ struct PostItem: Component {
     var body: Component {
         Article {
             Div {
+                if let image = item.imagePath?.absoluteString {
+                    Node.a(
+                        Image(image)
+                            .class("content-image").convertToNode(),
+                        .href(item.path.absoluteString)
+                    )
+                }
+            }
+            Div {
                 // Move this into the div below if you wanna have space on top between title and type.
                 H1(Link(item.title, url: item.path.absoluteString))
                 Node.picture(
@@ -26,7 +35,7 @@ struct PostItem: Component {
                 )
             }.class("item-header")
             Div {
-                Paragraph(item.description)
+                Paragraph(Link(item.description, url: item.path.absoluteString))
                 Text("").addLineBreak()
                 ItemTagList(tags: item.tags, site: site)
             }.class("item-content")
