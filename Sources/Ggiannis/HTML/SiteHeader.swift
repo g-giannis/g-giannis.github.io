@@ -9,9 +9,9 @@ import Foundation
 import Plot
 import Publish
 
-struct SiteHeader<Site: Website>: Component {
-    var context: PublishingContext<Site>
-    var selectedSelectionID: Site.SectionID?
+struct SiteHeader: Component {
+    var context: PublishingContext<Ggiannis>
+    var selectedSelectionID: Ggiannis.SectionID?
 
     var body: Component {
         Header {
@@ -24,7 +24,7 @@ struct SiteHeader<Site: Website>: Component {
                     .href(.init("/"))
                 )
 
-                if Site.SectionID.allCases.count > 1 {
+                if Ggiannis.SectionID.allCases.count > 1 {
                     navigation
                 }
             }
@@ -33,7 +33,7 @@ struct SiteHeader<Site: Website>: Component {
 
     private var navigation: Component {
         Navigation {
-            List(Site.SectionID.allCases) { sectionID in
+            List(Ggiannis.SectionID.allCases) { sectionID in
                 let section = context.sections[sectionID]
 
                 return Link(section.title,

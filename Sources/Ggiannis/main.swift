@@ -5,15 +5,23 @@ import SplashPublishPlugin
 
 // This type acts as the configuration for your website.
 struct Ggiannis: Website {
+    enum MarkdownDocumentType: String, Decodable {
+        case quickTip
+        case article
+        case app
+    }
+
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case photos
         case blog
         case about
+        case apps
         case resume
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
+        var type: MarkdownDocumentType
         // Add any site-specific metadata that you want to use here.
     }
 

@@ -12,7 +12,7 @@ import Publish
 
 private extension Node where Context == HTML.DocumentContext {
     static func metaTheme() -> Node<HTML.HeadContext> {
-        return .meta(.name("theme-color"), .content("#e3f1e8ff"))
+        return .meta(.name("theme-color"), .content("#c9e4d2"))
     }
 }
 
@@ -36,6 +36,7 @@ extension Node where Context == HTML.DocumentContext {
                                        stylesheetPaths: [Path] = ["/styles.css"]) -> Node {
         .group(
             .head(for: index, on: site, stylesheetPaths: stylesheetPaths),
+//            .raw("<meta http-equiv=\"refresh\" content=\"3\" >"),
             .metaTheme().convertToNode(),
             .googleAnalytics().convertToNode()
         )
