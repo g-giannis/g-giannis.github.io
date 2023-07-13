@@ -4,6 +4,16 @@
  *  MIT license - see LICENSE.md
  */
 
+article p code, article li code, .discover .content code {
+    background-color: #e2e2e2;
+    display: inline-block;
+    padding: 0 5px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    margin: 1px;
+    line-break: anywhere;
+}
+
 pre {
     margin-bottom: 1.5em;
     background-color: #1a1a1a;
@@ -11,8 +21,11 @@ pre {
     border-radius: 16px;
 }
 
+code {
+    font-family: "Menlo", monospace;
+}
+
 pre code {
-    font-family: monospace;
     display: block;
     padding: 0 20px;
     color: #a9bcbc;
