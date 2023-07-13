@@ -1,12 +1,12 @@
 ---
-title: My Little Riddle
+title: My Little Riddle (Coming Soon)
 description: Spot the Hidden Differences. An addictive iPad app for all ages!
 tags: ios, game
 type: app
 date: 2023-04-08 00:00
 image: /Images/Apps/my-little-riddle/start-screen.png
 ---
-# My Little Riddle
+# My Little Riddle (Coming Soon)
 
 <img src="/Images/Apps/my-little-riddle/start-screen.png" class="content-image" />
 
@@ -32,23 +32,19 @@ Spot the Differences provides hours of entertainment while giving your brain a w
 
 ## Make the overview screen colorful 
 
-With each completion of every level the riddle is vibrant colored:
+With each completion of every level the riddle is vibrant colored
 
 <img src="/Images/Apps/my-little-riddle/5-overview-riddle-solved.png" class="content-image" />
 
-## Get Started Today!
-
-Download Spot the Differences: A Visual Puzzle Game now and embark on an exciting visual adventure. Challenge yourself, spot the hidden disparities, and become the ultimate detective in this captivating puzzle game.
-
-[![Download on App Store](/Images/Apps/download-app-store-button.svg)](https://www.appstore.com)
-
 ---
+
 ## System Requirements
 
 - Compatible with iPad <sup>1</sup>
 - Requires iOS 14.0 or later
 
 ---
+
 ## Privacy
 
 Your personal information remains confidential and protected. This Privacy Policy outlines how your data are handled when you use the app.
@@ -68,4 +64,4 @@ If you have any questions, concerns, or requests regarding the privacy practices
 Last updated: 28.06.2023
 
 </br>
-<p class="copyright"><sup>1</sup> iPad is a trademark of Apple Inc., registered in the U.S. and other countries and regions.</p>
+<p class="small-caption"><sup>1</sup> iPad is a trademark of Apple Inc., registered in the U.S. and other countries and regions.</p>
