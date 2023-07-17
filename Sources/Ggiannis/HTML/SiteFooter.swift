@@ -19,12 +19,14 @@ struct ImageDescriptor {
 }
 
 struct SiteFooter: Component {
+    private static let imageSize: CGFloat = 32
+
     let images: [ImageDescriptor] = [
         .init(
             name: "Github",
             lightThemePath: "/Images/Footer/github-light.svg",
             darkThemePath: "/Images/Footer/github-dark.svg",
-            size: 32,
+            size: imageSize,
             title: "Github",
             link: "https://github.com/g-giannis"
         ),
@@ -32,7 +34,7 @@ struct SiteFooter: Component {
             name: "Mastodon",
             lightThemePath: "/Images/Footer/mastodon-light.svg",
             darkThemePath: "/Images/Footer/mastodon-dark.svg",
-            size: 32,
+            size: imageSize,
             title: "Mastodon",
             link: "https://mastodon.social/@ggiannis"
         ),
@@ -40,7 +42,7 @@ struct SiteFooter: Component {
             name: "LinkedIn",
             lightThemePath: "/Images/Footer/linked-in-light.svg",
             darkThemePath: "/Images/Footer/linked-in-dark.svg",
-            size: 32,
+            size: imageSize,
             title: "LinkedIn",
             link: "https://www.linkedin.com/in/ggiannis"
         ),
@@ -48,7 +50,7 @@ struct SiteFooter: Component {
             name: "Email",
             lightThemePath: "/Images/Footer/mail-light.svg",
             darkThemePath: "/Images/Footer/mail-dark.svg",
-            size: 32,
+            size: imageSize,
             title: "Email",
             link: "mailto:\("contact@ggiannis.com")"
         ),
@@ -56,7 +58,7 @@ struct SiteFooter: Component {
             name: "RSS Feed",
             lightThemePath: "/Images/Footer/rss-feed-light.svg",
             darkThemePath: "/Images/Footer/rss-feed-dark.svg",
-            size: 32,
+            size: imageSize,
             title: "Email",
             link: "/feed.rss"
         )
@@ -66,6 +68,8 @@ struct SiteFooter: Component {
         Footer {
             Paragraph {
                 Div {
+                    SubscriptionBanner()
+
                     Node.forEach(images) { image in
                         Node.a(
                             Node.picture(

@@ -27,6 +27,8 @@ struct SiteHeader: Component {
                 if Ggiannis.SectionID.allCases.count > 1 {
                     navigation
                 }
+
+                SubscriptionBanner()
             }
         }
     }

@@ -33,16 +33,15 @@ private struct CustomThemeFactory: HTMLFactory {
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper {
-                    #warning("do i need these???")
-//                    H1(index.title)
-//                    Paragraph(context.site.description)
-//                        .class("description")
+                    H1(index.title)
+                    Paragraph(context.site.description)
+                        .class("description")
 
                     H2("Hi, I'm Giannis.")
                     Paragraph {
                         Text("""
                                 Welcome to my blog!
-                                Here, I share updates on both my professional work and personal hobbies, so you can expect to find a mix of content that reflects my diverse interests.
+                                Here, I share updates on both my professional work and personal hobbies, so you can expect to find a mix of content that reflects my diverse interests. 😃
                                 """)
                     }
 
@@ -50,8 +49,7 @@ private struct CustomThemeFactory: HTMLFactory {
 
                     Div {
                         Div {
-                            H2("Latest from Blog")
-//                            Divider()
+                            H2("Latest News")
 
                             ItemList(
                                 items: context.mostRecentFiveItems,
@@ -62,7 +60,6 @@ private struct CustomThemeFactory: HTMLFactory {
                         Div {
                             Div {
                                 H2("Explore Categories")
-    //                            Divider()
 
                                 ItemTagList(tags: context.allTags.sorted(), site: context.site)
 
