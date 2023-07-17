@@ -29,6 +29,7 @@ body {
 }
 
 header {
+    color: #000;
     background-color: #c9e4d2;
 }
 
@@ -90,6 +91,38 @@ a {
 
 ul {
    list-style-position: inside;
+}
+
+input {
+    background: #333;
+    box-shadow: none;
+    color: #fff!important;
+    text-shadow: none;
+    border: 0!important;
+    padding: 7px;
+    border: none;
+}
+
+/* general submit */
+input[type=submit], input[type=submit]:hover {
+    cursor: pointer;
+    background: #333;
+    box-shadow: none;
+    color: #fff!important;
+    text-shadow: none;
+    border: 0!important;
+    border-radius: 8px!important;
+    padding: 7px;
+}
+
+input:focus {
+    outline:none;
+}
+
+/* MARK: - */
+
+.subscription_banner {
+    margin: 15px;
 }
 
 .description {
@@ -226,6 +259,48 @@ ul {
     font-size: 0.8em;
 }
 
+/* MARK - Newsletter */
+
+#mailchimp_subscribe_form label {
+    display: block;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+/* Override when it's inside the newsletter */
+#mailchimp_subscribe_form input[type=submit] {
+    display: block;
+    height: 36px;
+    width: 40%;
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+#mailchimp_subscribe_form {
+    display: flex;
+    background-color: var(--secondary-background);
+    border-radius: var(--border-radius);
+    justify-content: center;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+}
+
+#mc_embed_signup_scroll #mce-EMAIL {
+    display: block;
+    float: left;
+    color: #000!important;
+    height: 36px;
+    width: 60%;
+    padding: 0 10px;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #ededed;
+    -moz-box-sizing: border-box;
+    border-top-left-radius: 8px!important;
+    border-bottom: none!important;
+    border-bottom-left-radius: 8px!important;
+}
+
 /* MARK: - */
 
 footer {
@@ -263,6 +338,23 @@ footer {
     /* Custom */
     hr {
         background-color: #525252;
+    }
+
+    #mce-EMAIL {
+        display: block;
+        float: left;
+        color: #000!important;
+        height: 36px;
+        width: 60%;
+        padding: 0 10px;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        background: #fff;
+        -moz-box-sizing: border-box;
+        border-top-left-radius: 8px!important;
+        border-bottom: none!important;
+        border-bottom-left-radius: 8px!important;
     }
 }
 
