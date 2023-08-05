@@ -41,5 +41,6 @@ try Ggiannis().publish(using: [
     .generateHTML(withTheme: .custom),
     .generateRSSFeed(including: [.blog]),
     .generateSiteMap(),
+    .copyFile(at: Path("Content/robots.txt"))
 ])
 

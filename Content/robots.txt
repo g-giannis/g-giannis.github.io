@@ -1,0 +1,7 @@
+User-agent: *
+Crawl-delay: 10
+Disallow: /Images
+Disallow: /SplashPublishPlugin
+Disallow: /*.css
+
+Sitemap: https://ggiannis.com/sitemap.xml
