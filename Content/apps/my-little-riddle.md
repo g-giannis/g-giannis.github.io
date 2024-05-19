@@ -1,12 +1,12 @@
 ---
-title: My Little Riddle (Coming Soon)
+title: My Little Riddle
 description: Spot the Hidden Differences. An addictive iPad app for all ages!
 tags: ios, game
 type: app
 date: 2023-04-08 00:00
 image: /Images/Apps/my-little-riddle/start-screen.png
 ---
-# My Little Riddle (Coming Soon)
+# My Little Riddle
 
 <img src="/Images/Apps/my-little-riddle/start-screen.png" class="content-image" />
 

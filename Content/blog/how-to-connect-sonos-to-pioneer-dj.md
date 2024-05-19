@@ -4,7 +4,6 @@ description: Take advantage of connecting the Sonos Playbase to a Pioneer DJ con
 tags: djing, sonos, pioneer, connectivity
 type: quickTip
 date: 2023-04-29 00:00
-image: /Images/Blog/pioneer-ddj.jpg
 ---
 ## Introduction
 
@@ -33,14 +32,15 @@ Connect the one end of the RCA cable to the MASTER RCA output of the DDJ-RR and 
 Set the MASTER RCA as Output in your Pioneer DDJ-RR software, in my case Pioneer DJ Rekordbox.
 Enjoy mixing having as output your Sonos speakers!
 
-👎🏻 Cons: there is some slight delay (around 35ms) between the monitor output (headphones) and the master output (Sonos Playbase). This is intentionally there from Sonos to allow the surround speakers to sync. Even when there are no surround speakers connected! 😄
+> Hint: There is some slight delay (around 35ms) between the monitor output (headphones) and the master output (Sonos Playbase). This is intentionally there from Sonos to allow the surround speakers to sync. Even when there are no surround speakers connected! 😄
 
 ## Result 
 
 You can now use your Sonos System as an output for your DJ Sets and pre-CUE using your headphones.
 To make the experience even better, group more speakers with the main speaker (Sonos Playbase in my case) in the Sonos App and this way everyone in the apartment can enjoy your mix!
 
-💡Bonus tip: To avoid disconnecting / connecting the optical cable from the Sonos Playbase, you can buy an optical splitter. 
+## Bonus
+To avoid disconnecting / connecting the optical cable from the Sonos Playbase, you can buy an optical splitter. 
 
 I bought mine from [Amazon](https://www.amazon.de/gp/product/B00PXSIFWY/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=10).
 This way you can have both your TV and your DJ Controller permanently connected and switch the output via a remote control. 
