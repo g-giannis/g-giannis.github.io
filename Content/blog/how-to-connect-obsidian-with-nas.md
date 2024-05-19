@@ -1,6 +1,6 @@
 ---
-title: How to Connect Obsidian iOS with NAS
-description: Learn how to add a new remote location to the Obsidian iOS app.
+title: How to Sync Obsidian iOS with NAS: A Step-by-Step Guide
+description: Learn how to seamlessly sync your Obsidian iOS app with your NAS and any other remote location.
 tags: obsidian, nas, ios
 type: article
 date: 2024-05-08 00:00
