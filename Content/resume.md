@@ -1,35 +1,135 @@
-# Skills 
-<br/>
-
+ 
 <style>
-table th:first-of-type {
-    width: 50%;
+:root {
+    --background-light: #ffffff;
+    --background-dark: #1e1e1e;
+    --text-light: #333333;
+    --text-dark: #c9c9c9;
+    --border-light: #dddddd;
+    --border-dark: #444444;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+    --accent-color: #c9e4d2;
 }
-table th:nth-of-type(2) {
-    width: 50%;
+
+body.light-theme {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --border: var(--border-light);
+    --shadow: var(--shadow-light);
 }
+
+body.dark-theme {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --border: var(--border-dark);
+    --shadow: var(--shadow-dark);
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.skillsContainer > div {
+    flex: 1 1 calc(33.333% - 30px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--background);
+    box-shadow: 0 4px 8px var(--shadow);
+    padding: 0;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.skillsContainer h3 {
+    margin-top: 0;
+    color: var(--text);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.skillsContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+.skillsContainer li {
+    margin: 15px 0;
+    color: var(--text);
+    display: block;
+}
+.skillsContainer li span {
+    font-weight: bold;
+    display: block;
+    margin-left: 0px;
+}
+.skillsContainer li::before {
+    margin-right: 10px;
+    font-size: 1.4em;
+    display: inline-block;
+    width: 30px;
+}
+
+@media (max-width: 768px) {
+    .skillsContainer > div {
+        flex: 1 1 calc(50% - 30px);
+    }
+}
+@media (max-width: 480px) {
+    .skillsContainer > div {
+        flex: 1 1 100%;
+    }
+}
+
 </style>
 
-| **Personal** |  **Programming** |
-| ----------- | ----------- |
-| Team spirit, work commitment | iOS / macOS (Obj-C, Swift, SwiftUI, Combine), Xamarin  |
-| willing to learn, organisational skills, | Git, Unit Tests, TDD, Automated UI Tests |
-| attention to detail, time management | RESTful Web, Services (JSON), SOAP, NoSQL, MySQL |
-<br/>
-<br/>
+<div class="skillsContainer">
+    <div>
+        <h3>Personal Skills</h3><hr>
+        <ul>
+            <li>👥 In team we trust!</li>
+            <li>💪 Work commitment</li>
+            <li>🤓 Open for constructive feedback and willing to learn</li>
+            <li>🧠 Organizational Skills</li>
+            <li>🎯 Attention to Detail</li>
+            <li>🕖 Excellent time management</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Languages</h3><hr>
+        <ul>
+            <li><span>🇬🇧</span> Proficient (B2)</li>
+            <li><span>🇩🇪</span> Proficient (B1)</li>
+            <li><span>🇬🇷</span> Mother Language</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Technical Skills</h3><hr>
+        <ul>
+            <li><span>🌱 Experience (13 years)</span>iOS, macOS (strong knowledge)</br> tvOS, watchOS (basic) </li>
+            <li><span>🔄 Cross-Platform</span>Xamarin (iOS, Android), Kotlin-Mutliplatform</li>
+            <li><span>💻 Programming Languages</span>Swift (7 years), Objective-C (5 years), C# (2 years), Kotlin, Bash, Ruby, C++</li> 
+            <li><span>🧪 Testing</span>Unit Tests, TDD, Automated UI Tests</li>
+            <li><span>🌍 Web Services</span>REST, SOAP, OAuth</li>
+            <li><span>🗄️ Databases</span>CoreData, NoSQL (Firebase, Couchbase), SQLite (C++), Realm</li>
+            <li><span>🏛️ Architectures</span>MVVM, MVC, Clean Architecture, Redux</li>
+        </ul>
+    </div>
+</div>
 
+<br/><br/>
 # References 
 <br/>
 
-<img src="/Images/About/appdev-logo.png" style="max-width:120px; max-height:64px; margin-bottom: 0px;" alt="App Dev" title="App Dev" /> 
+<img src="/Images/About/appdev-logo.png" style="max-width:120px; max-height:64px; margin-bottom: 0px;" alt="App Dev" title="App Dev" /> ### IBM Health Platform
 01/02/2022 - Present<br/><br/>
  
 ## Key Facts
-- Senior iOS Developer
 - Sharing knowledge through software development tech talks
+- Leading technically an iOS Team of 7 developers 
 - Developing using SwiftUI, Combine, PromiseKit, new Swift Concurrency API
-- TDD with strict Pull Request rules (min. 100% code coverage)
- 
+- TDD with strict Pull Request rules (min. 80% code coverage)
+- Accessibility, VoiceOver, Full Keyboard Focus 
+
 ---
 
 <img src="/Images/About/check24-logo.png" style="max-width:100px; max-height:54px; margin-bottom: -10px;" alt="Check24" title="Check24" /> 
@@ -39,10 +139,11 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 
 <br/>    
 ## Key Facts
-- iOS leader and mentor 
+- iOS Tech-Lead and mentor 
 - Modernized the App from UIKit MVVM to SwiftUI MVVM-C with Reactive Components using Combine
 - Implemented dynamic generated XCTestCases from Gherkin language (Given, When, Then) 
-- Used SOLID Principles as long as TDD in the daily app development
+- Improved the architecture of the old app
+- Used SOLID Principles as long as TDD for the daily app development 
 
 ---
 
@@ -55,6 +156,9 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 - Senior Software Developer
 - Developed EBF Contacts App in Xamarin using the iOS Contacts Framework and CouchDB Lite as Database ([App Store](https://apps.apple.com/de/app/ebf-contacts/id1570229461?l=en)) 
 - Developed EBF Files App to access corporate data. Some of the feature highlights are PDF, Office Editing and File Synchronisation ([App Store](https://apps.apple.com/de/app/ebf-files/id1450387478?l=en))
+- Maintained various enterprise apps
+- Proof of Concept macOS app in AppKit & Obj-C
+- Responsible also for CI (Jenkins) for signing, distributing Whitelabel apps to customers  
 
 ---
 
@@ -68,13 +172,5 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 - Maintained "Holidays And Vacations" App which helps tracking public holidays and much more [(App Store)](https://apps.apple.com/de/app/holidays-and-vacations/id352642945?l=en)
 - Occasionally developed also for Windows Phone
 
----
 <div style="height:5px;"><br></div>
-
-## Languages
-
-🇺🇸 English: B2
-
-🇩🇪 German: B1
-
-🇬🇷 Greek: Mother Language
+<br/>

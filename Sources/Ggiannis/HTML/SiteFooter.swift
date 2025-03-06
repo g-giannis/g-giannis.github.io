@@ -84,7 +84,9 @@ struct SiteFooter: Component {
                     }
                 }
 
-                Text("© \(Calendar.current.component(.year, from: Date())) Giannis Giannopoulos, All rights reserved. Made with a lot of ☕️ and ❤️ in Berlin.")
+                Text("© \(Calendar.current.component(.year, from: Date())) Giannis Giannopoulos, All rights reserved.")
+                    .addLineBreak()
+                Text("Made with Swift, a lot of ☕️  and ❤️ in Berlin.")
                     .addLineBreak()
                     .addLineBreak()
             }
