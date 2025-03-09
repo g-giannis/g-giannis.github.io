@@ -98,7 +98,7 @@ body.dark-theme {
         <h3>Languages</h3><hr>
         <ul>
             <li><span>🇬🇧</span> Proficient (B2)</li>
-            <li><span>🇩🇪</span> Proficient (B1)</li>
+            <li><span>🇩🇪</span> Proficient (B2)</li>
             <li><span>🇬🇷</span> Mother Language</li>
         </ul>
     </div>
