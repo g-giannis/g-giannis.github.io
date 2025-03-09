@@ -124,11 +124,11 @@ body.dark-theme {
 01/02/2022 - Present<br/><br/>
  
 ## Key Facts
-- Sharing knowledge through software development tech talks
+- Sharing knowledge through Tech Talks
 - Leading technically an iOS Team of 7 developers 
 - Developing using SwiftUI, Combine, PromiseKit, new Swift Concurrency API
 - TDD with strict Pull Request rules (min. 80% code coverage)
-- Accessibility, VoiceOver, Full Keyboard Focus 
+- Fully WCAG compliant features (VoiceOver, Full Keyboard Access, Minimum Contrast) 
 
 ---
 
@@ -139,7 +139,7 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 
 <br/>    
 ## Key Facts
-- iOS Tech-Lead and mentor 
+- iOS Tech-Lead and (Junior, Senior) mentor 
 - Modernized the App from UIKit MVVM to SwiftUI MVVM-C with Reactive Components using Combine
 - Implemented dynamic generated XCTestCases from Gherkin language (Given, When, Then) 
 - Improved the architecture of the old app
@@ -154,10 +154,12 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
  
 ## Key Facts
 - Senior Software Developer
-- Developed EBF Contacts App in Xamarin using the iOS Contacts Framework and CouchDB Lite as Database ([App Store](https://apps.apple.com/de/app/ebf-contacts/id1570229461?l=en)) 
-- Developed EBF Files App to access corporate data. Some of the feature highlights are PDF, Office Editing and File Synchronisation ([App Store](https://apps.apple.com/de/app/ebf-files/id1450387478?l=en))
-- Maintained various enterprise apps
+- Ownership of deliveries (technical organization & execution)  
+- Developed EBF Contacts App in Xamarin (iOS & Android) using Contacts Framework and CouchDB Lite as Database ([App Store](https://apps.apple.com/de/app/ebf-contacts/id1570229461?l=en)) 
+- Developed EBF Files App (iOS & Android) to access corporate data. Some of the feature highlights are PDF, Office Editing and File Synchronisation ([App Store](https://apps.apple.com/de/app/ebf-files/id1450387478?l=en))
+- Developed Enterprise Apps that leveraged IoT devices (Beacons) and wearables (Apple Watch)
 - Proof of Concept macOS app in AppKit & Obj-C
+- Maintained various apps
 - Responsible also for CI (Jenkins) for signing, distributing Whitelabel apps to customers  
 
 ---
@@ -167,9 +169,9 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 01/11/2012 – 31/09/2015<br/><br/>
 
 ## Key Facts
-- Junior iOS Developer
 - Mainly worked on the Bosch MySPIN Car Infotainement System [(read more)](https://www.bosch-mobility-solutions.com/en/solutions/infotainment/myspin/) 
 - Maintained "Holidays And Vacations" App which helps tracking public holidays and much more [(App Store)](https://apps.apple.com/de/app/holidays-and-vacations/id352642945?l=en)
+- Worked on sharing Database and Networking code across iOS & Android using C++  
 - Occasionally developed also for Windows Phone
 
 <div style="height:5px;"><br></div>
