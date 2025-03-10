@@ -1,4 +1,7 @@
- 
+---
+title: Resume
+---
+
 <style>
 :root {
     --background-light: #ffffff;
