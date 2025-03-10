@@ -102,7 +102,7 @@ body.dark-theme {
         <ul>
             <li><span>🇬🇧</span> Proficient (C1)</li>
             <li><span>🇩🇪</span> Proficient (C1)</li>
-            <li><span>🇬🇷</span> Mother Language</li>
+            <li><span>🇬🇷</span> Mother Tongue</li>
         </ul>
     </div>
     <div>
@@ -146,7 +146,7 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 - Modernized the App from UIKit MVVM to SwiftUI MVVM-C with Reactive Components using Combine
 - Implemented dynamic generated XCTestCases from Gherkin language (Given, When, Then) 
 - Improved the architecture of the old app
-- Used SOLID Principles as long as TDD for the daily app development 
+- Used SOLID Principles as well as TDD for the daily app development 
 
 ---
 
@@ -163,7 +163,7 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 - Developed Enterprise Apps that leveraged IoT devices (Beacons) and wearables (Apple Watch)
 - Proof of Concept macOS app in AppKit & Obj-C
 - Maintained various apps
-- Responsible also for CI (Jenkins) for signing, distributing Whitelabel apps to customers  
+- Responsible for CI (Jenkins) for signing, distributing Whitelabel apps to customers  
 
 ---
 
@@ -174,7 +174,7 @@ With the [CHECK24 iOS App](https://apps.apple.com/us/app/check24/id719610089) yo
 ## Key Facts
 - Mainly worked on the Bosch MySPIN Car Infotainement System [(read more)](https://www.bosch-mobility-solutions.com/en/solutions/infotainment/myspin/) 
 - Maintained "Holidays And Vacations" App which helps tracking public holidays and much more [(App Store)](https://apps.apple.com/de/app/holidays-and-vacations/id352642945?l=en)
-- Worked on sharing Database and Networking code across iOS & Android using C++  
+- Worked on the shared Database and Networking code across iOS & Android using C++  
 - Occasionally developed also for Windows Phone
 
 <div style="height:5px;"><br></div>
