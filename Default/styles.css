@@ -6,6 +6,11 @@
 
 /* MARK: - General */
 
+:root {
+  /* define your accent color once */
+  --accent: #c9e4d2;       /* or hsl(204, 70%, 53%), rgba(52,152,219,1), etc. */
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -1,0 +1,15 @@
+<svg
+    width="256"
+    height="256"
+    viewBox="0 0 256 256"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <!-- Background Circle -->
+    <rect width="256" height="256" rx="40" fill="#c9e4d2"/>
+
+    <!-- Terminal Symbol -->
+    <polyline points="80,100 120,128 80,156" stroke="#333" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="136" y1="128" x2="176" y2="128" stroke="#333" stroke-width="12" stroke-linecap="round"/>
+
+</svg>
