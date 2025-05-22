@@ -282,7 +282,7 @@ image: /Images/Apps/hebe/hebe-app-icon.png
   </div>
       <h2>Accelerate Your Xcode Workflow</h2>
       <p>Context-aware commands for Git, CocoaPods, project scripts & more—driven entirely by keyboard.</p>
-      <a href="https://bitbucket.org/ggiannopoulos/hebe-releases/downloads/Hebe-0.1.0.dmg" class="hebe-btn-accent">
+      <a href="https://github.com/g-giannis/hebe-releases/releases/download/v0.1.0-alpha/Hebe-0.1.0.dmg" class="hebe-btn-accent">
         <span class="apple-logo"></span>
         Download for Mac
       </a>
