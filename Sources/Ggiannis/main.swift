@@ -45,7 +45,7 @@ try Ggiannis().publish(using: [
 ])
 
 extension PublishingStep where Site == Ggiannis {
-    /// Custom resource copying that handles nested directories properly
+    /// Custom resource copying that handles nested directories properly.
     static func copyResourcesWithProperDirectories() -> Self {
         .step(named: "Copy Resources with Proper Directory Structure") { context in
             let fileManager = FileManager.default
