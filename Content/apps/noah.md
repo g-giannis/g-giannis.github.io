@@ -259,7 +259,7 @@ body.noah-page {
       All designed for tired parents who need simplicity, not clutter.
     </p>
 
-    <a href="localhost" style="display: inline-block;">
+    <a href="https://apple.co/4bvm29q" style="display: inline-block;">
     <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us" alt="Download on the App Store" style="width: 200px; height: auto; vertical-align: middle; object-fit: contain;">
     </a>
   </div>
